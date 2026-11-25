@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional resume of Nikhil Kumar Vashist, Assistant Professor at Galgotias University.">
+  <meta name="theme-color" content="#102a43">
+  <title>Nikhil Kumar Vashist | Professional Resume</title>
+  <style>
+    /* ---------- Base styles ---------- */
+    :root {
+      --navy: #102a43;
+      --blue: #2563a6;
+      --light-blue: #eaf3fb;
+      --ink: #243447;
+      --muted: #64748b;
+      --line: #dbe4ee;
+      --paper: #ffffff;
+      --page: #f4f7fb;
+      --shadow: 0 12px 35px rgba(16, 42, 67, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1100px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+    .nav-wrap {
+      min-height: 70px; display: flex; align-items: center;
+      justify-content: space-between; gap: 22px;
+    }
+    .brand { color: var(--navy); font-weight: 800; letter-spacing: -.3px; white-space: nowrap; }
+    .nav-links { display: flex; align-items: center; gap: 21px; }
+    .nav-links a { color: #526477; font-size: .91rem; font-weight: 600; }
+    .nav-links a:hover { color: var(--blue); text-decoration: none; }
+    .menu-toggle {
+      display: none; border: 1px solid var(--line); border-radius: 8px;
+      background: white; color: var(--navy); padding: 8px 11px; font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .hero {
+      background: linear-gradient(120deg, #fff 0%, #f4f8fc 100%);
+      border-bottom: 1px solid var(--line);
+      padding: 76px 0 68px;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 35px; align-items: center; }
+    .eyebrow {
+      display: inline-block; color: var(--blue); background: var(--light-blue);
+      border-radius: 999px; padding: 6px 13px; font-size: .78rem;
+      font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+    }
+    h1 {
+      color: var(--navy); font-size: clamp(2.5rem, 6vw, 4.2rem);
+      line-height: 1.08; letter-spacing: -2px; margin: 18px 0 12px;
+    }
+    .hero-role { font-size: clamp(1.1rem, 2.3vw, 1.4rem); color: #526477; font-weight: 600; margin: 0 0 15px; }
+    .hero-summary { max-width: 690px; color: #526477; font-size: 1.05rem; margin: 0; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border: 1px solid var(--navy); border-radius: 8px; padding: 11px 17px;
+      font: inherit; font-size: .92rem; font-weight: 700; cursor: pointer;
+      transition: background .18s ease, transform .18s ease;
+    }
+    .button:hover { transform: translateY(-1px); text-decoration: none; }
+    .button-primary { color: #fff; background: var(--navy); }
+    .button-primary:hover { background: #1d4568; }
+    .button-secondary { color: var(--navy); background: #fff; border-color: #cbd7e3; }
+    .button-secondary:hover { background: var(--light-blue); }
+    .hero-photo {
+      width: 190px; height: 190px; border-radius: 24px;
+      display: block; object-fit: cover; object-position: center;
+      border: 1px solid #d6e6f5; box-shadow: var(--shadow);
+      background: var(--light-blue);
+    }
+    main { padding: 42px 0 70px; }
+    .content-grid { display: grid; grid-template-columns: minmax(0, 1fr) 285px; gap: 26px; align-items: start; }
+    .main-column, .side-column { display: grid; gap: 22px; }
+    .section-card {
+      background: var(--paper); border: 1px solid var(--line);
+      border-radius: 14px; padding: 28px 30px; box-shadow: var(--shadow);
+    }
+    .section-heading {
+      display: flex; align-items: center; gap: 12px;
+      margin: 0 0 20px; color: var(--navy); font-size: 1.28rem;
+      letter-spacing: -.35px;
+    }
+    .section-heading::before {
+      content: ""; width: 4px; height: 23px; border-radius: 4px; background: var(--blue);
+    }
+    .section-card p { margin: 0 0 12px; }
+    .section-card p:last-child { margin-bottom: 0; }
+    .muted { color: var(--muted); }
+    .career-objective {
+      padding: 15px 17px; border-left: 3px solid var(--blue);
+      background: #f5f9fd; border-radius: 0 8px 8px 0; color: #40566b;
+    }
+    .timeline-item { position: relative; padding: 0 0 22px 22px; border-left: 1px solid #cbd9e6; }
+    .timeline-item:last-child { padding-bottom: 0; border-left-color: transparent; }
+    .timeline-item::before {
+      content: ""; position: absolute; left: -5px; top: 5px;
+      width: 9px; height: 9px; border-radius: 50%; background: var(--blue);
+      box-shadow: 0 0 0 4px var(--light-blue);
+    }
+    .item-title { color: var(--navy); font-weight: 750; margin: 0; }
+    .item-subtitle { color: var(--blue); font-weight: 650; margin: 2px 0 5px; }
+    .item-meta { color: var(--muted); font-size: .88rem; margin-bottom: 8px; }
+    .skill-group { margin-bottom: 18px; }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group h3 { margin: 0 0 9px; font-size: .96rem; color: var(--navy); }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      display: inline-block; padding: 6px 10px; border-radius: 7px;
+      background: #f0f5fa; border: 1px solid #e0e9f2;
+      color: #40566b; font-size: .85rem; font-weight: 600;
+    }
+    .contact-list { display: grid; gap: 13px; }
+    .contact-row { display: grid; grid-template-columns: 25px 1fr; gap: 9px; align-items: start; }
+    .contact-icon { color: var(--blue); font-weight: 800; text-align: center; }
+    .contact-label { display: block; color: var(--muted); font-size: .76rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
+    .contact-value { overflow-wrap: anywhere; font-size: .91rem; font-weight: 600; }
+    .fact-list { margin: 0; padding-left: 18px; }
+    .fact-list li { margin: 7px 0; }
+    .footer { padding: 24px 0; text-align: center; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); background: #fff; }
+    @media (max-width: 900px) {
+      .content-grid { grid-template-columns: 1fr; }
+      .side-column { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .side-column .section-card:first-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 700px) {
+      .container { width: min(100% - 30px, 560px); }
+      .nav-wrap { min-height: 62px; }
+      .menu-toggle { display: inline-block; }
+      .nav-links {
+        display: none; position: absolute; top: 62px; left: 0; right: 0;
+        padding: 14px 20px 18px; background: #fff; border-bottom: 1px solid var(--line);
+        flex-direction: column; align-items: flex-start; gap: 13px;
+      }
+      .nav-links.open { display: flex; }
+      .hero { padding: 52px 0 48px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-aside { display: none; }
+      h1 { letter-spacing: -1.3px; }
+      main { padding-top: 25px; }
+      .section-card { padding: 23px 21px; }
+      .side-column { grid-template-columns: 1fr; }
+      .side-column .section-card:first-child { grid-column: auto; }
+    }
+    /* Print layout: hide navigation/actions and remove decorative page styling. */
+    @media print {
+      @page { size: A4; margin: 14mm; }
+      body { background: #fff; color: #111827; font-size: 10pt; }
+      .topbar, .hero-actions, .footer { display: none !important; }
+      .hero { padding: 0 0 18px; background: #fff; border: 0; }
+      .hero-grid { display: block; }
+      h1 { font-size: 28pt; margin: 8px 0; }
+      main { padding: 0; }
+      .content-grid { display: block; }
+      .main-column, .side-column { display: block; }
+      .section-card { box-shadow: none; border: 1px solid #d5dce4; padding: 15px 17px; margin: 0 0 12px; break-inside: avoid; }
+      .section-heading { font-size: 13pt; margin-bottom: 12px; }
+      a { color: #1d4f7a; }
+      .tag { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky navigation -->
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">Nikhil Kumar Vashist<span aria-hidden="true">.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Intro / home section -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Professional Resume</span>
+        <h1>Nikhil Kumar<br>Vashist</h1>
+        <p class="hero-role">Assistant Professor · Galgotias University</p>
+        <p class="hero-summary">An educator with multiple industry experiences, interested in combining analytical thinking, technology and management to create meaningful impact.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact">Get in touch</a>
+          <button class="button button-secondary" type="button" id="printButton">Print / Save as PDF</button>
+        </div>
+      </div>
+      <img class="hero-photo" src="./photo.jpg" alt="Profile photo of Nikhil Kumar Vashist">
+    </div>
+  </section>
+
+  <main>
+    <div class="container content-grid">
+      <div class="main-column">
+        <section class="section-card" id="about">
+          <h2 class="section-heading">About Me</h2>
+          <p>I am an Assistant Professor with multiple industry experience. My professional interests bring together finance, business analytics, technology and education.</p>
+          <h3 class="item-title" style="font-size:1rem; margin:18px 0 9px;">Career Objective</h3>
+          <p class="career-objective">My core objective of career is to serve the society in a positive manner and bring out a positive change.</p>
+        </section>
+
+        <section class="section-card" id="education">
+          <h2 class="section-heading">Education</h2>
+          <div class="timeline-item">
+            <h3 class="item-title">MBA – Finance &amp; Business Analytics</h3>
+            <p class="item-subtitle">Delhi Technological University</p>
+            <div class="item-meta">2023 – 2025 <span aria-hidden="true">·</span> CGPA: 9.33</div>
+          </div>
+        </section>
+
+        <section class="section-card" id="experience">
+          <h2 class="section-heading">Internship &amp; Work Experience</h2>
+          <div class="timeline-item">
+            <h3 class="item-title">Summer Intern</h3>
+            <p class="item-subtitle">National Informatics Center (NIC)</p>
+            <div class="item-meta">Duration: 2 months</div>
+            <p>Developed a service performance dashboard to monitor the status and service performance of 95+ different services provided by the Government of NCT Delhi at Sub-Division, District and UT levels.</p>
+          </div>
+        </section>
+
+        <section class="section-card" id="projects">
+          <h2 class="section-heading">Projects</h2>
+          <div class="timeline-item">
+            <h3 class="item-title">Stock Market Advisor App</h3>
+            <p>The application analyzes the market based on market trends and provides suitable decisions for buying and selling securities.</p>
+          </div>
+        </section>
+
+        <section class="section-card" id="achievements">
+          <h2 class="section-heading">Certifications &amp; Achievements</h2>
+          <div class="skill-group">
+            <h3>Certifications</h3>
+            <div class="tags">
+              <span class="tag">Corporate Finance</span>
+              <span class="tag">Data Analytics</span>
+              <span class="tag">Marketing Analytics</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Achievements</h3>
+            <ul class="fact-list">
+              <li>Batch topper.</li>
+              <li>Cleared national-level examinations including JEE, CAT, GATE, SSC CGL and UGC NET.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <aside class="side-column">
+        <section class="section-card" id="contact">
+          <h2 class="section-heading">Contact</h2>
+          <div class="contact-list">
+            <div class="contact-row">
+              <span class="contact-icon" aria-hidden="true">✉</span>
+              <div><span class="contact-label">Email</span><a class="contact-value" href="mailto:nikhil.vashist@galgotiasuniversity.edu.in">nikhil.vashist@galgotiasuniversity.edu.in</a></div>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon" aria-hidden="true">☎</span>
+              <div><span class="contact-label">Phone</span><a class="contact-value" href="tel:+919996248585">+91 9996248585</a></div>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon" aria-hidden="true">in</span>
+              <div><span class="contact-label">LinkedIn</span><a class="contact-value" href="https://www.linkedin.com/in/nikhil-kumar-vashist-140970291" target="_blank" rel="noopener noreferrer">View LinkedIn profile</a></div>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon" aria-hidden="true">⌖</span>
+              <div><span class="contact-label">Location</span><span class="contact-value">Sonipat, Haryana</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card" id="skills">
+          <h2 class="section-heading">Skills</h2>
+          <div class="skill-group">
+            <h3>Technical Skills</h3>
+            <div class="tags">
+              <span class="tag">Java</span><span class="tag">Python</span><span class="tag">MS Office</span>
+              <span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Tableau</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Management Skills</h3>
+            <div class="tags"><span class="tag">Presentation Skills</span><span class="tag">Leadership Skills</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>Soft Skills</h3>
+            <div class="tags"><span class="tag">Public Speaker</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <div class="tags"><span class="tag">English</span><span class="tag">Hindi</span></div>
+          </div>
+        </section>
+
+        <section class="section-card" id="interests">
+          <h2 class="section-heading">Interests</h2>
+          <div class="skill-group">
+            <h3>Hobbies</h3>
+            <div class="tags"><span class="tag">Basketball</span><span class="tag">Swimming</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>Extracurricular Activities</h3>
+            <ul class="fact-list">
+              <li>National Service Scheme (NSS) Volunteer</li>
+              <li>E-Sports Organizer</li>
+            </ul>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Nikhil Kumar Vashist · Professional Resume</div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.textContent = isOpen ? '✕' : '☰';
+    });
+
+    // Close the mobile menu after selecting a section
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.textContent = '☰';
+      });
+    });
+
+    // Use the browser's print dialog; choose "Save as PDF" to export a PDF copy.
+    document.getElementById('printButton').addEventListener('click', () => window.print());
+
+    // Keep the footer year current without relying on an external service.
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
